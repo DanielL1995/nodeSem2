@@ -1,0 +1,23 @@
+//http status code
+
+200 = OK
+404 means resource not found
+500 means server err
+204 = no content
+
+//REST properties
+
+GET -used to retreve data from the server
+POST -used to send data to the server
+PUT - update data
+DELETE - delete data
+
+
+Brak async, await spowoduje "TypeError: Converting circular structure to JSON"
+
+app.get('/alladverts',async(req,res)=>{
+    
+    const allAdverts = await Advert.find()
+    
+    res.send(allAdverts)
+})

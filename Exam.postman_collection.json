@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "225ad121-20d2-4292-86e3-40284f6425b1",
+		"name": "Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19888911"
+	},
+	"item": [
+		{
+			"name": "Date",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/heartbeat",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"{{$randomFullName}}\",\r\n    \"lastName\":\"{{$randomLastName}}\",\r\n    \"username\":\"{{$randomUserName}}\",\r\n    \"password\":\"{{$randomPassword}}\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/adduser",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"adduser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAdvert",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "Ayla_Lynch",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "IW64reQxAvzvOSd",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"{{$randomProductName}}\",\r\n    \"description\":\"{{$randomPhrase}}\",\r\n    \"category\":\"{{$randomWord}}\",\r\n    \"tags\":[\"{{$randomAdjective}}\",\"{{$randomAdjective}}\",\"{{$randomAdjective}}\"],\r\n    \"price\":\"{{$randomPrice}}\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/advertss",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"advertss"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TakeAdvertById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/6288f22c27a3e063d77609aa",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"6288f22c27a3e063d77609aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TakeAllAdverts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "TakeAdvertByPrice",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/adverts/delete629c654ee8cfd6edcf5ab170\n",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"adverts",
+						"delete629c654ee8cfd6edcf5ab170\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\":\"{{$randomProductName}}\",\r\n\"description\":\"{{$randomPhrase}}\",\r\n\"category\":\"{{$randomWord}}\",\r\n\"tags\":[\"{{$randomAdjective}}\",\"{{$randomAdjective}}\",\"{{$randomAdjective}}\"],\r\n\"price\":\"{{$randomPrice}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/adverts629b8e451f24ac6907d8fff3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"adverts629b8e451f24ac6907d8fff3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
